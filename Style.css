@@ -1,0 +1,145 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+.hero{
+  width:100%;
+  min-height:100vh;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.82), rgba(0,0,0,.35)),
+    url("../assets/image1.png");
+  background-size:cover;
+  background-position:center;
+  color:white;
+  position:relative;
+}
+
+.header{
+  width:100%;
+  margin:auto;
+  padding:35px 0 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid rgba(255, 255, 255, 0.2);
+  background-color:solid rgba(181, 178, 178, 0.2); ;
+}
+
+.logo img{
+  width:150px;
+}
+
+.nav{
+  display:flex;
+  gap:45px;
+}
+
+.nav a{
+  color:white;
+  text-decoration:none;
+  font-size:18px;
+  transition:.3s;
+}
+
+.nav a.active,
+.nav a:hover{
+  color:#d6a12d;
+}
+
+.quote-btn{
+  color:white;
+  text-decoration:none;
+  border:1px solid #d6a12d;
+  padding:16px 28px;
+  border-radius:6px;
+  font-size:18px;
+}
+
+.quote-btn:hover{
+  background:#d6a12d;
+  color:#111;
+}
+
+.hero-content{
+  position:absolute;
+  left:5%;
+  top:32%;
+}
+
+.hero-content h1{
+  font-size:90px;
+  line-height:1.15;
+  font-weight:800;
+}
+
+.hero-content span{
+  color:#d6a12d;
+}
+
+.line{
+  width:80px;
+  height:3px;
+  background:#d6a12d;
+  margin:35px 0;
+}
+
+.hero-content p{
+  font-size:34px;
+  line-height:1.4;
+  margin-bottom:35px;
+}
+
+.hero-btn{
+  display:inline-block;
+  background:#d6a12d;
+  color:#111;
+  text-decoration:none;
+  padding:18px 38px;
+  font-size:22px;
+  border-radius:6px;
+  font-weight:bold;
+}
+
+.menu-btn{
+  display:none;
+  background:none;
+  color:white;
+  border:none;
+  font-size:30px;
+}
+
+@media(max-width:900px){
+  .nav{
+    display:none;
+    position:absolute;
+    top:110px;
+    right:5%;
+    background:#111;
+    flex-direction:column;
+    padding:25px;
+    gap:20px;
+  }
+
+  .nav.show{
+    display:flex;
+  }
+
+  .quote-btn{
+    display:none;
+  }
+
+  .menu-btn{
+    display:block;
+  }
+
+  .hero-content h1{
+    font-size:48px;
+  }
+
+  .hero-content p{
+    font-size:24px;
+  }
+}
